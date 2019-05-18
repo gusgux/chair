@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.9440402202251157 -0.31847821488225386 -0.08578863119742657 0.5559033511213158
-  position 0.015612661257264238 1.1904129002341708 1.5385738783642209
+  orientation -0.8118456187325322 -0.5724500724230527 -0.11492434871528937 0.4848469292504802
+  position -0.19868816810808998 0.9379042559228058 1.6012417558882537
 }
 TexturedBackground {
 }
@@ -17,7 +17,7 @@ Solid {
   children [
     Group {
       children [
-        Shape {
+        DEF SIT_shape Shape {
           appearance DEF APPERANCE__SIT PBRAppearance {
             baseColor 0.20392156862745098 0.396078431372549 0.6431372549019608
             roughness 1
@@ -147,6 +147,14 @@ Solid {
       ]
     }
   ]
+  boundingObject Group {
+    children [
+      USE SIT_shape
+      USE BAR_BOX28CM
+      USE BAR_BOX15CM
+      USE BAR_CYLINDER
+    ]
+  }
   physics Physics {
   }
 }
