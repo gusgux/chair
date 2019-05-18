@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.9511644711319129 -0.2634325202135387 0.16090200791255488 0.44441348732173186
-  position -0.11768308833405974 0.8207863046245831 0.886526027664937
+  orientation -0.9440402202251157 -0.31847821488225386 -0.08578863119742657 0.5559033511213158
+  position 0.015612661257264238 1.1904129002341708 1.5385738783642209
 }
 TexturedBackground {
 }
@@ -12,13 +12,13 @@ TexturedBackgroundLight {
 Floor {
 }
 Solid {
-  translation 0 0.025 0
-  rotation 1 0 0 0
+  translation 0 0.676 0
+  rotation 0 0 1 3.141592644
   children [
     Group {
       children [
         Shape {
-          appearance PBRAppearance {
+          appearance DEF APPERANCE__SIT PBRAppearance {
             baseColor 0.20392156862745098 0.396078431372549 0.6431372549019608
             transparency 0.2
           }
@@ -29,7 +29,7 @@ Solid {
         }
       ]
     }
-    Group {
+    DEF ST_BAR15CM Group {
       children [
         Transform {
           translation 0 0.03 -0.065
@@ -66,10 +66,10 @@ Solid {
         }
       ]
     }
-    Group {
+    DEF ST_BAR28CM Group {
       children [
         Transform {
-          translation -0.13 0.665 0
+          translation -0.13 0.28 0
           rotation 0 1 0 1.57
           children [
             DEF BAR_BOX28CM Shape {
@@ -105,10 +105,10 @@ Solid {
         }
       ]
     }
-    Group {
+    DEF ST_BAR Group {
       children [
         Transform {
-          translation 0.131 0.374 0.065
+          translation 0.131 0.36 0.065
           rotation 0 0 1 -0.2
           children [
             DEF BAR_CYLINDER Shape {
@@ -116,24 +116,27 @@ Solid {
                 baseColor 0.9372549019607843 0.1607843137254902 0.1607843137254902
               }
               geometry Cylinder {
-                height 0.686
+                height 0.646
                 radius 0.007
               }
             }
             Transform {
-              translation -0.252 -0.05 0
-              rotation 0 0 1 0.35
+              translation -0.259 -0.05 0
+              rotation 0 0 1 0.395
               children [
                 USE BAR_CYLINDER
               ]
             }
             Transform {
-              translation -0.15000000000000002 0 -0.13
+              translation -0.259 -0.05 -0.13
+              rotation 0 0 1 0.395
               children [
                 USE BAR_CYLINDER
               ]
             }
             Transform {
+              translation 0 0 -0.13
+              rotation 0 0 1 0
               children [
                 USE BAR_CYLINDER
               ]
@@ -145,31 +148,4 @@ Solid {
   ]
   physics Physics {
   }
-}
-Solid {
-  translation 0.67 0.35 0
-  children [
-    Shape {
-      appearance PBRAppearance {
-      }
-      geometry Box {
-        size 0.7 0.7 0.7
-      }
-    }
-  ]
-  name "solid(1)"
-}
-Solid {
-  translation 0 0.705 0
-  children [
-    Shape {
-      appearance PBRAppearance {
-        transparency 0.2
-      }
-      geometry Box {
-        size 0.4 0.01 0.4
-      }
-    }
-  ]
-  name "solid(2)"
 }
